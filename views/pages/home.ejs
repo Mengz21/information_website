@@ -1,0 +1,89 @@
+<%- include("../partials/_header"); -%>
+
+<main>
+  <!-- call to action section, add a picture navbar-dark bg-dark -->
+  <section class="py-5 text-center container presentation">
+    <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <h1 class="fw-light">Album example</h1>
+        <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p>
+        <p>
+          <a href="/compose" class="btn btn-primary my-2">Make a Post</a>
+          <a href="#" class="btn btn-secondary my-2">Subscribe</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="nav-scroller py-1 mb-2">
+    <nav class="nav d-flex justify-content-between">
+      <a class="p-2 link-secondary" href="#">医疗</a>
+      <a class="p-2 link-secondary" href="#">紧急情况</a>
+      <a class="p-2 link-secondary" href="#">自然灾害</a>
+      <a class="p-2 link-secondary" href="#">公益组织</a>
+      <a class="p-2 link-secondary" href="#">教育</a>
+      <a class="p-2 link-secondary" href="#">个人</a>
+      <a class="p-2 link-secondary" href="#">老人</a>
+      <a class="p-2 link-secondary" href="#">儿童</a>
+      <a class="p-2 link-secondary" href="#">其它</a>
+    </nav>
+  </div>
+
+
+
+<!--album/card  section-->
+  <div class="album py-5 " >
+    <div class="container card-deck">
+
+
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-3">
+
+
+      <%  posts.forEach(function(post){ %>
+
+        <div class="col">
+           <div class="card shadow-sm">
+             <div class="row g-0">
+               <div class="col-md-4">
+                 <img id = "share" src="./assets/school.png" width="100%" height="225">
+               </div>
+               <div class="col-md-8">
+                 <div class="card-body">
+                   <h5 class="card-title"><%=post.title%></h5>
+                   <h6 class="card-subtitle mb-2 text-muted"><%=post.name%></h6>
+                   <p class="card-text">  <%=post.content.substring(0, 100) + " ..."%></p>
+                   <div class="d-flex justify-content-between">
+                     <p class="card-text"> <small class="text-muted"><%=post.city%></small> </p>
+                     <p class="card-text"> <small class="text-muted">3分钟</small> </p>
+                   </div>
+                 </div>
+               </div>
+               <div class="card-footer">
+                 <div class="d-flex justify-content-end">
+                   <a href="/posts/<%=post._id%>">Read More</a>
+
+                   <img id = "share" src="./assets/share.png" alt="Flowers in Chania" width="32" height="32">
+                   <p class="card-text"> <small class="text-muted">3000 </small> </p>
+                   <img id = "fist" src="./assets/fist_48px.png" alt="Flowers in Chania" width="32" height="32">
+                   <p class="card-text"> <small class="text-muted">10000</small> </p>
+                 </div>
+               </div>
+             </div>
+           </div>
+         </div>
+
+
+
+
+      <% }) %>
+
+
+      </div>
+    </div>
+  </div>
+
+</main>
+
+
+
+  <%- include("../partials/_footer"); -%>

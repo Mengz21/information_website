@@ -1,0 +1,54 @@
+<%- include("../partials/_header"); -%>
+
+<!-- Page content-->
+    <div class="content">
+
+        <div class=" container mt-5 page" >
+            <div class="row">
+                <div class="col-lg-8">
+                    <!-- Post content-->
+                    <article>
+                        <!-- Post header-->
+                        <header class="mb-4">
+                            <!-- Post title-->
+                            <h1 class="fw-bolder mb-1"><%=title%></h1>
+
+                            <!-- Post categories-->
+                            <a class="badge bg-secondary text-decoration-none link-light" href="#!">学校</a>
+                            <a class="badge bg-secondary text-decoration-none link-light" href="#!">教育</a>
+                        </header>
+                        <!-- Preview image figure NEED TO MAKE FIXED SIZE-->
+                        <figure class="mb-4"><img class="img-fluid rounded" src="../assets/school.png" alt="..." /></figure>
+
+                        <!-- Post content-->
+                        <section class="mb-5">
+                          <ul class="list-unstyled">
+
+
+
+
+                            <li><h6> Contact: <%= name %></h6></li>
+                            <li><h6>  Location: <%= city %></h6></li>
+                            <li><h6> Contact: <%= displayedContact %></h6></li>
+                            <li>  <p class="fs-5 mb-4"><%= content %></p></li>
+
+                          </ul>
+                        </section>
+                    </article>
+
+
+              
+
+
+                </div>
+
+
+                <!--   include("../partials/_sidewidgets");-->
+
+
+
+
+            </div>
+        </div>
+      </div>
+      <%- include("../partials/_footer"); -%>
